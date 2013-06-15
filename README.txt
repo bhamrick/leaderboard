@@ -1,4 +1,3 @@
-This is a base for creating a pyramid-based heroku app. Setting it up
-essentially involves replacing APPNAME with your desired application name
-everywhere. This code is free to use however you'd like, don't ask me for
-permission. If you find some issues with it, report them to bhamrick AT mit.edu
+A simple leaderboards site, created for the purpose of Pokemon records while
+we wait for the SpeedRunsLive leaderboards. If you find issues with the code
+, report them to bhamrick AT mit.edu

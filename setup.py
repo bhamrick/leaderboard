@@ -16,9 +16,9 @@ requires = [
     'waitress',
     ]
 
-setup(name='APPNAME',
+setup(name='leaderboard',
       version='0.0',
-      description='APPNAME',
+      description='leaderboard',
       long_description=README + '\n\n' +  CHANGES,
       classifiers=[
         "Programming Language :: Python",
@@ -33,13 +33,13 @@ setup(name='APPNAME',
       packages=find_packages(),
       include_package_data=True,
       zip_safe=False,
-      test_suite='APPNAME',
+      test_suite='leaderboard',
       install_requires=requires,
       entry_points="""\
       [paste.app_factory]
-      main = APPNAME:main
+      main = leaderboard:main
       [console_scripts]
-      initialize_APPNAME_db = APPNAME.scripts.initializedb:main
+      initialize_leaderboard_db = leaderboard.scripts.initializedb:main
       """,
       )
 
