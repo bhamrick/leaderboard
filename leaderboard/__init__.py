@@ -9,6 +9,7 @@ def main(global_config, **settings):
     """
     if settings['sqlalchemy.url'][0] == '%':
         settings['sqlalchemy.url'] = os.environ[settings['sqlalchemy.url'][1:]]
+    print "%s" % settings
     engine = engine_from_config(settings, 'sqlalchemy.')
     globals()['DBEngine'] = engine
     config = Configurator(settings=settings)
