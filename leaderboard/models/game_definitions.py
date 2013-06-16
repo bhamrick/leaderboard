@@ -1,4 +1,4 @@
-from leaderboard.model.datatypes import (
+from leaderboard.models.datatypes import (
     Enum,
     Time
     )
@@ -6,7 +6,10 @@ from leaderboard.model.datatypes import (
 import inspect
 import sys
 
-class PokemonRedBlue:
+class Game(object):
+    pass
+
+class PokemonRedBlue(Game):
     name = "Pokemon Red/Blue"
     shortname = "rb"
     category_data = {
@@ -26,7 +29,7 @@ class PokemonRedBlue:
             }
         }
 
-class PokemonYellow:
+class PokemonYellow(Game):
     name = "Pokemon Yellow"
     shortname = "y"
     category_data = {
@@ -48,5 +51,5 @@ class PokemonYellow:
 
 games_by_shortname = {}
 for name, obj in inspect.getmembers(sys.modules[__name__]):
-    if inspect.isclass(obj):
+    if inspect.isclass(obj) and issubclass(obj, Game) and obj is not Game:
         games_by_shortname[obj.shortname] = obj
