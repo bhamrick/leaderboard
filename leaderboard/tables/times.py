@@ -11,7 +11,7 @@ times = Table('times', metadata,
     Column('player', String(40)),
     Column('data', Text),
     Column('comment', String(200)),
-    # Look into doing country
+    Column('country', String(3)),
 )
 
 metadata.create_all(DBEngine)
