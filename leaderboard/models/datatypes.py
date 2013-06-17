@@ -6,7 +6,7 @@ class Enum(object):
     def __init__(self, *values):
         self.values = set(values)
 
-    def from_string(self, s):
+    def __call__(self, s):
         if s not in self.values:
             raise TypeError("Invalid enum value")
         return s
@@ -18,7 +18,7 @@ class Time(object):
     def __init__(self, resolution):
         self.resolution = resolution
 
-    def from_string(self, s):
+    def __call__(self, s):
         """ Accepts a string and returns it as a float rounded
             down to the nearest multiple of self.resolution
         """

@@ -3,10 +3,11 @@ from sqlalchemy import (
     MetaData,
     Table,
     )
+from leaderboard import DBEngine
 
 metadata = MetaData()
 
-times = Table('times', metadata,
+Times = Table('times', metadata,
     Column('id', Integer, primary_key=True),
     Column('player', String(40)),
     Column('data', Text),

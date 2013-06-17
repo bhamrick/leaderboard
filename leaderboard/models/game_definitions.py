@@ -13,7 +13,7 @@ class PokemonRedBlue(Game):
     name = "Pokemon Red/Blue"
     shortname = "rb"
     category_data = {
-        "Any% glitchless": {
+        "Any% Glitchless": {
             "Game Time": Time(60),
             "Real Time": Time(0.1),
             "Version": Enum("Red", "Blue"),
@@ -33,7 +33,7 @@ class PokemonYellow(Game):
     name = "Pokemon Yellow"
     shortname = "y"
     category_data = {
-        "Any% glitchless": {
+        "Any% Glitchless": {
             "Game Time": Time(60),
             "Real Time": Time(0.1),
             "Version": Enum("Red", "Blue"),
