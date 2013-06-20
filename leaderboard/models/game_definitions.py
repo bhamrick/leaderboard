@@ -28,6 +28,12 @@ class PokemonRedBlue(Game):
                              "Other Emulator"),
             }
         }
+    default_sort = {
+        "Any% Glitchless": [
+            ("Game Time", True),
+            ("Real Time", False), # Don't use this to break ties
+            ]
+        }
 
 class PokemonYellow(Game):
     name = "Pokemon Yellow"
@@ -47,6 +53,12 @@ class PokemonYellow(Game):
                              "VBA",
                              "Other Emulator"),
             }
+        }
+    default_sort = {
+        "Any% Glitchless": [
+            ("Game Time", True),
+            ("Real Time", False), # Don't use this to break ties
+            ]
         }
 
 games_by_shortname = {}
