@@ -12,7 +12,7 @@ class Enum(object):
         return s
 
     def description(self):
-        return "Enum(%s)" % (', '.join(map(repr, self.values))
+        return "Enum(%s)" % (', '.join(map(repr, self.values)))
 
 class Time(object):
     def __init__(self, resolution):
