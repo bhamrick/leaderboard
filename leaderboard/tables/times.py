@@ -8,7 +8,7 @@ from sqlalchemy.types import (
     String,
     Text,
     )
-#from leaderboard import DBEngine
+from leaderboard import DBEngine
 
 metadata = MetaData()
 

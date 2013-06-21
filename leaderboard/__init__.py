@@ -1,10 +1,10 @@
-from pyramid.config import Configurator
-from sqlalchemy import engine_from_config
-import os
-
-from .config import routes
-
 def main(global_config, **settings):
+    from pyramid.config import Configurator
+    from sqlalchemy import engine_from_config
+    import os
+
+    from .config import routes
+
     """ This function returns a Pyramid WSGI application.
     """
     global DBEngine
