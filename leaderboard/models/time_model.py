@@ -4,7 +4,7 @@ from leaderboard.tables.times import (
 from leaderboard.models.game_definitions import (
     games_by_shortname,
     )
-from leaderboard import DBEngine
+#from leaderboard import DBEngine
 
 import simplejson as json
 

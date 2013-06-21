@@ -3,7 +3,7 @@ from sqlalchemy import (
     MetaData,
     Table,
     )
-from leaderboard import DBEngine
+#from leaderboard import DBEngine
 
 metadata = MetaData()
 
