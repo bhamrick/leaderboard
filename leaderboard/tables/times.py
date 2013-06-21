@@ -3,6 +3,11 @@ from sqlalchemy import (
     MetaData,
     Table,
     )
+from sqlalchemy.types import (
+    Integer,
+    String,
+    Text,
+    )
 #from leaderboard import DBEngine
 
 metadata = MetaData()
