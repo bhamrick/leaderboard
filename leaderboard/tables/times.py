@@ -8,7 +8,7 @@ from sqlalchemy.types import (
     String,
     Text,
     )
-from leaderboard import DBEngine
+import leaderboard
 
 metadata = MetaData()
 
@@ -22,4 +22,4 @@ Times = Table('times', metadata,
     Column('country', String(3)),
 )
 
-metadata.create_all(DBEngine)
+metadata.create_all(leaderboard.DBEngine)

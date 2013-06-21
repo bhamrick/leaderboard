@@ -4,7 +4,7 @@ from leaderboard.tables.times import (
 from leaderboard.models.game_definitions import (
     games_by_shortname,
     )
-from leaderboard import DBEngine
+import leaderboard
 
 import simplejson as json
 
@@ -38,7 +38,7 @@ class TimeModel:
                                     data=data_string,
                                     comment=comment,
                                     country=country)
-        conn = DBEngine.connect()
+        conn = leaderboard.DBEngine.connect()
         result = conn.execute(ins)
         return result.inserted_primary_key
 
@@ -55,5 +55,5 @@ class TimeModel:
             Times.c.game == game,
             Times.c.category == category,
             ))
-        conn = DBEngine.connect()
+        conn = leaderboard.DBEngine.connect()
         return conn.execute(query).fetchall()
