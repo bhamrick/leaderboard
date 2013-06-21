@@ -1,1 +1,4 @@
-# Nothing for now...
+import os
+
+RECAPTCHA_PUBLIC_KEY=os.environ['RECAPTCHA_PUBLIC_KEY']
+RECAPTCHA_PRIVATE_KEY=os.environ['RECAPTCHA_PRIVATE_KEY']

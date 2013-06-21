@@ -1,4 +1,5 @@
 from leaderboard.views.games import GamesView
+from leaderboard.views.times import TimesView
 from leaderboard.views.web import WebView
 
 def routes(config):
@@ -24,3 +25,6 @@ def routes(config):
 
     config.add_route('category_sort', '/category_sort/{game}/{category}')
     config.add_view(GamesView.category_sort, route_name='category_sort')
+
+    config.add_route('get_times', '/times/{game}/{category}')
+    config.add_view(TimesView.times, route_name='get_times')

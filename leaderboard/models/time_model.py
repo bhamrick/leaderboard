@@ -8,6 +8,10 @@ from leaderboard import DBEngine
 
 import simplejson as json
 
+from sqlalchemy.sql import (
+    select,
+    )
+
 class TimeModel:
     @staticmethod
     def add_time(data):
@@ -28,7 +32,9 @@ class TimeModel:
         TimeModel._prepare(schema, data)
         data_string = json.dumps(data)
 
-        ins = Times.insert().values(player=player,
+        ins = Times.insert().values(game=shortname,
+                                    category=category,
+                                    player=player,
                                     data=data_string,
                                     comment=comment,
                                     country=country)
@@ -40,3 +46,14 @@ class TimeModel:
     def _prepare(schema, data):
         for key, t in schema.iteritems():
             data[key] = t(data[key])
+
+    @staticmethod
+    def get_times(game, category):
+        """ Gets the times for a category. Will actually pull all times
+        """
+        query = select([Times]).where(and_(
+            Times.c.game == game,
+            Times.c.category == category,
+            ))
+        conn = DBEngine.connect()
+        return conn.execute(query).fetchall()
